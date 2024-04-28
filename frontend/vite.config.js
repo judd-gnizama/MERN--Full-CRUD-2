@@ -9,7 +9,7 @@ export default defineConfig({
     proxy: {
       '/api' : {
         target: "https://mern-full-crud-2.vercel.app",
-        changeOrigin : true
+        changeOrigin : false
       }
     }
   }
