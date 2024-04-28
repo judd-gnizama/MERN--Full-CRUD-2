@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      'api' : {
+      '/api' : {
         "target" : "https://mern-full-crud-2.vercel.app",
         "changeOrigin" : true
       }
