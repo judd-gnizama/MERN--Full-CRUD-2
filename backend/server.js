@@ -11,7 +11,7 @@ const mode = process.env.NODE_ENV
 const corsOptions = mode === 'development' ? {
   origin: '*'
 } : {
-  origin: process.env.FRONTEND_URL_DEPLOY,
+  origin: "https://mern-full-crud-2-i1mc.vercel.app",
   methods: 'GET,POST,PUT,DELETE',  // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],  // Allowed headers
   credentials: true // Optional: Allow cookies or authorization credentials (if applicable)
