@@ -1,6 +1,6 @@
 
-// const backendBaseURL = process.env.NODE_ENV === 'development' ? "http://localhost:4000" : "mern-full-crud-2.vercel.app"
-const backendBaseURL = "/"
+const backendBaseURL = process.env.NODE_ENV === 'development' ? "http://localhost:4000" : "mern-full-crud-2.vercel.app"
+
 // ------------------------ GET ALL POSTS ---------------------------
 const getPosts = async () => {
   // since method is get, no need to add options
