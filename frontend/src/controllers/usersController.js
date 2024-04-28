@@ -1,4 +1,4 @@
-const backendBaseURL = "https://mern-full-crud-2.vercel.app"
+const backendBaseURL = ""
 
 
 // ------------------------ LOGIN USER ----------------------------

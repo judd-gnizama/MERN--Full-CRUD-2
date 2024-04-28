@@ -1,5 +1,5 @@
 
-const backendBaseURL = "https://mern-full-crud-2.vercel.app"
+const backendBaseURL = ""
 
 // ------------------------ GET ALL POSTS ---------------------------
 const getPosts = async () => {
