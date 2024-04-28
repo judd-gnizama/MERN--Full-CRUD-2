@@ -8,18 +8,19 @@ const app = express();
 
 const mode = process.env.NODE_ENV
 
-const corsOptions = mode === 'development' ? {
-  origin: '*'
-} : {
-  origin: "https://mern-full-crud-2-i1mc.vercel.app",
-  methods: 'GET,POST,PUT,DELETE',  // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],  // Allowed headers
-  credentials: true // Optional: Allow cookies or authorization credentials (if applicable)
-};
+// const corsOptions = mode === 'development' ? {
+//   origin: '*'
+// } : {
+//   origin: "https://mern-full-crud-2-i1mc.vercel.app",
+//   methods: 'GET,POST,PUT,DELETE',  // Allowed HTTP methods
+//   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],  // Allowed headers
+//   credentials: true // Optional: Allow cookies or authorization credentials (if applicable)
+// };
 
-const corsMiddleware = cors(corsOptions);
+// const corsMiddleware = cors(corsOptions);
 
-app.use(corsMiddleware);
+// app.use(corsMiddleware);
+app.use(cors());
 
 app.use(express.json()); // middleware that intercepts requests but must be json
 
