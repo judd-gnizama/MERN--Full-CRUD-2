@@ -5,6 +5,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  server: {}
+  server: {
+    proxy: {
+      'api' : {
+        "target" : "https://mern-full-crud-2.vercel.app",
+        "changeOrigin" : true
+      }
+    }
+  }
 })
 
