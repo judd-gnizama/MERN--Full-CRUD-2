@@ -8,8 +8,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/api' : {
-        "target" : "https://mern-full-crud-2.vercel.app",
-        "changeOrigin" : true
+        target: "https://mern-full-crud-2.vercel.app",
+        changeOrigin : true
       }
     }
   }
