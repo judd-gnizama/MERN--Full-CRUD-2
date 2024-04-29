@@ -42,6 +42,7 @@ const Dashboard = () => {
     setTimeout(async () => {
       const email = localStorage.getItem('email');
       const { userPosts } = await getUserPosts();
+      console.log(userPosts);
       setUser({...user, email: email, posts: userPosts})
       setLoading(false);
     }, 1000)
