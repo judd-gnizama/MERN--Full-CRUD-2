@@ -44,7 +44,7 @@ const Dashboard = () => {
       const { userPosts } = await getUserPosts();
       setUser({...user, email: email, posts: userPosts})
       setLoading(false);
-    }, 500)
+    }, 1000)
   }, [])
 
   return( 
