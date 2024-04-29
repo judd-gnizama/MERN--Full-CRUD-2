@@ -39,6 +39,7 @@ const Dashboard = () => {
   }
 
   useEffect(() => {
+    console.log("loaded");
     setTimeout(async () => {
       const email = localStorage.getItem('email');
       const { userPosts } = await getUserPosts();
