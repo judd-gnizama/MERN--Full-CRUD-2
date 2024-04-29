@@ -4,6 +4,13 @@ import { usersRoutes } from './routes/usersRoutes.js';
 import mongoose from 'mongoose';
 import cors from 'cors'
 
+import path from 'path'
+import { fileURLToPath } from 'url';
+
+// Resolving dirname for ES module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 
 const corsOptions = process.env.FRONTEND_URL_DEPLOY ? {
@@ -22,6 +29,10 @@ app.use(express.json()); // middleware that intercepts requests but must be json
 
 app.use('/api/posts', postsRoutes)
 app.use('/api/users', usersRoutes)
+
+
+// Render client
+app.get("*", (req, res) => res.sendFile(path.join(__dirname, '../frontend/dist/index.html')))
 
 //"mongodb://localhost:27017"
 
