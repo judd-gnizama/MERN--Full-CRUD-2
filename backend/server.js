@@ -6,16 +6,12 @@ import cors from 'cors'
 
 const app = express();
 
-const mode = process.env.NODE_ENV
-
-const corsOptions = mode === 'development' ? {
-  origin: '*'
-} : {
-  origin: "https://mern-full-crud-2-i1mc.vercel.app", // Replace with your frontend's URL
-  // methods: 'GET,POST,PUT,DELETE',  // Allowed HTTP methods
-  // allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],  // Allowed headers
-  // credentials: true // Optional: Allow cookies or authorization credentials (if applicable)
-};
+const corsOptions = process.env.FRONTEND_URL_DEPLOY ? {
+  origin: process.env.FRONTEND_URL_DEPLOY, // Replace with your frontend's URL
+  methods: 'GET,POST,PUT,DELETE',  // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],  // Allowed headers
+  credentials: true // Optional: Allow cookies or authorization credentials (if applicable)
+} : {};
 
 const corsMiddleware = cors(corsOptions);
 
