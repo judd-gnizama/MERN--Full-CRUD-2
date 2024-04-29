@@ -4,6 +4,6 @@ import { Navigate, Outlet } from "react-router-dom";
 
 const AuthRoutes = () => {
   const { user } = useContext(UserContext);
-  return user.email ? <Navigate to="/login"/> : <Navigate to="/login"/>
+  return user.email ? <Navigate to="/"/> : <Navigate to="/login"/>
 }
 export default AuthRoutes;
