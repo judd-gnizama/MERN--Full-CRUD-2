@@ -1,4 +1,6 @@
+
 const backendBaseURL = process.env.BACKEND_URL_DEPLOY || 'http://localhost:4000'
+console.log(backendBaseURL)
 
 
 // ------------------------ LOGIN USER ----------------------------
