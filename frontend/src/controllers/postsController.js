@@ -1,5 +1,5 @@
 
-const backendBaseURL = ""
+const backendBaseURL = "https://mern-full-crud-2.onrender.com"
 
 // ------------------------ GET ALL POSTS ---------------------------
 const getPosts = async () => {

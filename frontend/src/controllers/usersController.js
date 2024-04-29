@@ -1,4 +1,4 @@
-const backendBaseURL = ""
+const backendBaseURL = "https://mern-full-crud-2.onrender.com"
 
 
 // ------------------------ LOGIN USER ----------------------------
