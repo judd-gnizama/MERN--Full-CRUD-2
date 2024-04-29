@@ -1,5 +1,5 @@
 
-const backendBaseURL = process.env.BACKEND_URL_DEPLOY || 'http://localhost:4000'
+const backendBaseURL = process.env.BACKEND_URL_DEPLOY
 console.log(backendBaseURL)
 
 // ------------------------ GET ALL POSTS ---------------------------
