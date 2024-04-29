@@ -4,7 +4,6 @@ import User from '../models/UserModel.js';
 
 // ------------------ GET ALL POSTS ---------------------------------
 const getPosts = async (req, res) => {
-  console.log(req)
   try {
     const posts = await Post.find().sort({ createdAt: "desc" })
     res.status(200).json( { posts })
