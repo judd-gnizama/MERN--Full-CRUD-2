@@ -45,7 +45,7 @@ const Dashboard = () => {
       console.log(userPosts);
       setUser({...user, email: email, posts: userPosts})
       setLoading(false);
-    }, 1000)
+    }, 5000)
   }, [])
 
   return( 
