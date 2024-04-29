@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './pages/Layout'
 import Login from './pages/users/Login'
 import Register from './pages/users/Register'
@@ -15,7 +15,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Home/>}/>
-          
+          <Route path='*' element={<Navigate to='/' replace/>}/>
           <Route element={<AuthRoutes/>}>
             <Route path='dashboard' element={<Dashboard/>}/>
             <Route path='create' element={<Create/>}/>
